@@ -5,6 +5,7 @@ import ScrollAnimation from './components/ScrollAnimation'
 import BackgroundAnimation from './components/BackgroundAnimation'
 import rainbetLogo from './img/rainbet-logo.png'
 import sonyLogo from './img/Sony.png'
+import prsLogo from './img/PRS_logo.png'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -252,8 +253,8 @@ const App = () => {
               <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-transform duration-300 hover:scale-105">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
-                    src="./src/img/PRS_logo.png"
-                    alt="PRS Stock Platform"
+                    src={prsLogo} 
+                    alt="PRS Car Stock Platform"
                     className="w-full h-36 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -270,13 +271,14 @@ const App = () => {
                 <div className="p-4">
                   <h3 className="text-lg font-bold mb-2">PRS Stock Platform</h3>
                   <p className="text-textSecondary text-sm mb-3">
-                    A comprehensive stock tracking and analysis platform with real-time data visualization and intuitive dashboard.
+                    A comprehensive Car stock tracking and analysis platform with real-time data visualization and intuitive dashboard.
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Data Viz</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Real-time</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Dashboard</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Analytics</span>
+                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">MongoDB</span>
+                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">NodeJS</span>
+                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">ExpressJS</span>
+                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">HTML/CSS</span>
+                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Responsive</span>
                   </div>
                 </div>
               </div>
