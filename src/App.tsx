@@ -350,7 +350,7 @@ const App = () => {
       <footer className="w-full bg-black/60 border-t border-white/10 py-8 mt-20">
         <div className="max-w-4xl mx-auto flex flex-col items-center justify-center gap-4 px-4">
           <div className="text-center text-textSecondary text-sm">
-            © {new Date().getFullYear()} Gaurav | Digital Craftsman. Pushing the boundaries of creativity.
+            © {new Date().getFullYear()} Gaurav | Software Craftsman. Pushing the boundaries of creativity.
           </div>
         </div>
       </footer>
