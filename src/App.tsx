@@ -97,9 +97,7 @@ const App = () => {
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.4} threshold={0.2}>
               <p className="text-lg text-textSecondary max-w-2xl mx-auto mb-12">
-                I'm a passionate Full Stack Web Developer who loves turning ideas into interactive, 
-                high-performing digital experiences. With a strong foundation in both frontend and backend technologies, 
-                I specialize in building responsive, scalable, and user-centric web applications from the ground up.
+              Where code meets creativity. I craft immersive web experiences and stunning visual narratives that push the boundaries of digital art.
               </p>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.6} threshold={0.2}>
