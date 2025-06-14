@@ -86,28 +86,34 @@ const App = () => {
             className="floating"
           >
             <ScrollAnimation direction="down" threshold={0.2}>
-              <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-tertiary to-accent">
+              <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-tertiary via-accent to-tertiary animate-gradient-x">
                 CREATIVE DEVELOPER
               </h1>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2} threshold={0.2}>
-              <p className="text-xl md:text-2xl text-textSecondary mb-8">
+              <p className="text-xl md:text-2xl text-textSecondary mb-8 font-light tracking-wide">
                 Full Stack Web Developer
               </p>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.4} threshold={0.2}>
-              <p className="text-lg text-textSecondary max-w-2xl mx-auto mb-12">
-              Where code meets creativity. I craft immersive web experiences and stunning visual narratives that push the boundaries of digital art.
+              <p className="text-lg text-textSecondary max-w-2xl mx-auto mb-12 leading-relaxed">
+                Where code meets creativity. I craft immersive web experiences and stunning visual narratives that push the boundaries of digital art.
               </p>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.6} threshold={0.2}>
-              <div className="flex gap-4 justify-center">
-                <a href="#portfolio" className="btn btn-primary group">
-                  <span className="relative z-10">Explore My Work</span>
+              <div className="flex gap-6 justify-center">
+                <a href="#portfolio" className="btn btn-primary group relative overflow-hidden">
+                  <span className="relative z-10 flex items-center gap-2">
+                    Explore My Work
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
                   <span className="absolute inset-0 bg-tertiary/20 blur-xl transform scale-0 group-hover:scale-100 transition-transform duration-300" />
                 </a>
-                <a href="#contact" className="btn border border-tertiary text-tertiary hover:bg-tertiary/10 group">
-                  <span className="relative z-10">Get In Touch</span>
+                <a href="#contact" className="btn border border-tertiary text-tertiary hover:bg-tertiary/10 group relative overflow-hidden">
+                  <span className="relative z-10 flex items-center gap-2">
+                    Get In Touch
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
                   <span className="absolute inset-0 bg-tertiary/10 blur-xl transform scale-0 group-hover:scale-100 transition-transform duration-300" />
                 </a>
               </div>
@@ -178,105 +184,105 @@ const App = () => {
             <h3 className="text-2xl font-bold mb-8 text-center">💻 Web Development</h3>
           </ScrollAnimation>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
             <ScrollAnimation direction="left" delay={0.3} threshold={0.2}>
-              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-transform duration-300 hover:scale-105">
+              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img 
                     src={rainbetLogo} 
                     alt="Lucky Roller Reward Platform" 
-                    className="w-full h-36 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
                     <a 
                       href="https://www.luckyrollerreward.com/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="btn btn-primary text-sm px-4 py-2"
+                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
                     >
                       Visit Live Site
                     </a>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold mb-2">Lucky Roller Reward</h3>
-                  <p className="text-textSecondary text-sm mb-3">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">Lucky Roller Reward</h3>
+                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
                     An interactive gaming platform featuring smooth animations, engaging user interfaces, and seamless user experience.
                   </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">JavaScript</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">CSS3</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Responsive</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Animations</span>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">JavaScript</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">CSS3</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Responsive</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Animations</span>
                   </div>
                 </div>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation direction="right" delay={0.4} threshold={0.2}>
-              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-transform duration-300 hover:scale-105">
+              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img 
                     src={sonyLogo} 
                     alt="Sony Crusher Engineering Website" 
-                    className="w-full h-36 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
                     <a 
                       href="https://sony-crusher.vercel.app" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="btn btn-primary text-sm px-4 py-2"
+                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
                     >
                       Visit Live Site
                     </a>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold mb-2">Sony Crusher Engineering</h3>
-                  <p className="text-textSecondary text-sm mb-3">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">Sony Crusher Engineering</h3>
+                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
                     A professional business website for a leading stone crusher and wiremesh manufacturing company.
                   </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Node JS</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">HTML/CSS</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Responsive</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Business</span>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Node JS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">HTML/CSS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Responsive</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Business</span>
                   </div>
                 </div>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation direction="left" delay={0.5} threshold={0.2}>
-              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-transform duration-300 hover:scale-105">
+              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={prsLogo} 
                     alt="PRS Car Stock Platform"
-                    className="w-full h-36 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
                     <a
                       href="https://prs-stock.x02.me/stock"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-primary text-sm px-4 py-2"
+                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
                     >
                       Visit Live Site
                     </a>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold mb-2">PRS Stock Platform</h3>
-                  <p className="text-textSecondary text-sm mb-3">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">PRS Stock Platform</h3>
+                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
                     A comprehensive Car stock tracking and analysis platform with real-time data visualization and intuitive dashboard.
                   </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">MongoDB</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">NodeJS</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">ExpressJS</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">HTML/CSS</span>
-                    <span className="px-2 py-0.5 bg-accent/10 text-accent rounded-full text-xs">Responsive</span>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">MongoDB</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">NodeJS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">ExpressJS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">HTML/CSS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Responsive</span>
                   </div>
                 </div>
               </div>
