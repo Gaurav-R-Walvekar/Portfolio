@@ -1,53 +1,86 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { ReactNode } from 'react'
+import { useRef, useEffect } from 'react'
+import { motion, useInView, useAnimation, Variants } from 'framer-motion'
 
 interface ScrollAnimationProps {
-  children: ReactNode
-  className?: string
+  children: React.ReactNode
   delay?: number
   direction?: 'up' | 'down' | 'left' | 'right'
+  className?: string
+  threshold?: number
 }
 
-const ScrollAnimation = ({
-  children,
+const ScrollAnimation = ({ 
+  children, 
+  delay = 0, 
+  direction = 'up',
   className = '',
-  delay = 0,
-  direction = 'up'
+  threshold = 0.1
 }: ScrollAnimationProps) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
+  const ref = useRef(null)
+  const isInView = useInView(ref, { 
+    amount: threshold,
+    once: false 
   })
+  const controls = useAnimation()
 
-  const getDirectionOffset = () => {
-    switch (direction) {
-      case 'up':
-        return { y: 50 }
-      case 'down':
-        return { y: -50 }
-      case 'left':
-        return { x: 50 }
-      case 'right':
-        return { x: -50 }
-      default:
-        return { y: 50 }
+  const getDirectionVariants = (): Variants => {
+    const distance = 100
+    const directions = {
+      up: { y: distance },
+      down: { y: -distance },
+      left: { x: distance },
+      right: { x: -distance }
+    }
+
+    return {
+      hidden: {
+        opacity: 0,
+        ...directions[direction],
+        scale: 0.95,
+        filter: 'blur(10px)',
+      },
+      visible: {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        scale: 1,
+        filter: 'blur(0px)',
+        transition: {
+          type: 'spring',
+          duration: 1.2,
+          bounce: 0.3,
+          delay: delay,
+        }
+      },
+      exit: {
+        opacity: 0,
+        ...directions[direction],
+        scale: 0.95,
+        filter: 'blur(10px)',
+        transition: {
+          duration: 0.5,
+          ease: 'easeOut'
+        }
+      }
     }
   }
 
-  const offset = getDirectionOffset()
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible')
+    } else {
+      controls.start('exit')
+    }
+  }, [isInView, controls])
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, ...offset }}
-      animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, ...offset }}
-      transition={{
-        duration: 0.8,
-        delay: delay,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
+      initial="hidden"
+      animate={controls}
+      variants={getDirectionVariants()}
       className={className}
+      viewport={{ once: false, amount: threshold }}
     >
       {children}
     </motion.div>
