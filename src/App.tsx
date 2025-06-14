@@ -322,7 +322,7 @@ const App = () => {
                 </a>
                 <div className="flex space-x-4 mt-2">
                   <a 
-                    href="https://github.com/yourusername" 
+                    href="https://github.com/Gaurav-R-Walvekar" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-textSecondary hover:text-tertiary transition-colors duration-300 group"
@@ -330,7 +330,7 @@ const App = () => {
                     <FiGithub className="text-2xl group-hover:scale-110 transition-transform duration-300" />
                   </a>
                   <a 
-                    href="https://linkedin.com/in/yourusername" 
+                    href="https://www.linkedin.com/in/gaurav-walvekar-323166211/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-textSecondary hover:text-tertiary transition-colors duration-300 group"
