@@ -348,7 +348,7 @@ const App = () => {
               </p>
               <div className="flex flex-col space-y-4 items-center">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+918888308567"
                   className="flex items-center space-x-2 text-tertiary hover:text-accent transition-colors duration-300 group"
                 >
                   <FiPhone className="text-xl group-hover:scale-110 transition-transform duration-300" />
