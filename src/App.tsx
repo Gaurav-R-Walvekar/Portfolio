@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiMenu, FiX, FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi'
+import { FiMenu, FiX, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi'
 import ScrollAnimation from './components/ScrollAnimation'
 import BackgroundAnimation from './components/BackgroundAnimation'
 import rainbetLogo from './img/rainbet-logo.png'
