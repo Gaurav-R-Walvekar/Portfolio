@@ -6,6 +6,7 @@ import BackgroundAnimation from './components/BackgroundAnimation'
 import rainbetLogo from './img/rainbet-logo.png'
 import sonyLogo from './img/Sony.png'
 import prsLogo from './img/PRS_logo.png'
+import hotelLogo from './img/Hotel_logo.png'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,7 +26,7 @@ const App = () => {
         <div className="container py-4">
           <div className="flex items-center justify-between">
             <a href="#" className="text-2xl font-bold text-tertiary relative group">
-              <span className="relative z-10">Portfolio</span>
+              <span className="relative z-10">AiSoft</span>
               <span className="absolute inset-0 bg-tertiary/20 blur-xl transform scale-0 group-hover:scale-100 transition-transform duration-300" />
             </a>
             
@@ -87,24 +88,24 @@ const App = () => {
           >
             <ScrollAnimation direction="down" threshold={0.2}>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-tertiary via-accent to-tertiary animate-gradient-x">
-                CREATIVE DEVELOPER
+                AiSoft CREATIVE SOLUTIONS
               </h1>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2} threshold={0.2}>
               <p className="text-xl md:text-2xl text-textSecondary mb-8 font-light tracking-wide">
-                Full Stack Web Developer
+                Innovative Web & Software Development
               </p>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.4} threshold={0.2}>
               <p className="text-lg text-textSecondary max-w-2xl mx-auto mb-12 leading-relaxed">
-                Where code meets creativity. I craft immersive web experiences and stunning visual narratives that push the boundaries of digital art.
+                Where code meets creativity. We craft immersive web experiences and stunning visual narratives that push the boundaries of digital art.
               </p>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.6} threshold={0.2}>
               <div className="flex gap-6 justify-center">
                 <a href="#portfolio" className="btn btn-primary group relative overflow-hidden">
                   <span className="relative z-10 flex items-center gap-2">
-                    Explore My Work
+                    Explore Our Work
                     <span className="transform group-hover:translate-x-1 transition-transform">→</span>
                   </span>
                   <span className="absolute inset-0 bg-tertiary/20 blur-xl transform scale-0 group-hover:scale-100 transition-transform duration-300" />
@@ -126,13 +127,13 @@ const App = () => {
       <section id="about" className="py-20 relative">
         <div className="container relative z-10">
           <ScrollAnimation direction="down" threshold={0.2}>
-            <h2 className="section-title text-center">About Me</h2>
+            <h2 className="section-title text-center">About Us</h2>
           </ScrollAnimation>
           <ScrollAnimation direction="up" delay={0.2} threshold={0.2}>
             <p className="text-textSecondary text-center max-w-3xl mx-auto mb-12">
-              I'm a passionate Full Stack Web Developer who loves turning ideas into interactive, 
-              high-performing digital experiences. With a strong foundation in both frontend and backend technologies, 
-              I specialize in building responsive, scalable, and user-centric web applications from the ground up.
+              We are a passionate team of developers and designers who love turning ideas into interactive,
+              high-performing digital experiences. With a strong foundation in both frontend and backend technologies,
+              we specialize in building responsive, scalable, and user-centric web applications from the ground up.
             </p>
           </ScrollAnimation>
           <div className="grid md:grid-cols-3 gap-8">
@@ -177,7 +178,7 @@ const App = () => {
       <section id="portfolio" className="py-20 relative">
         <div className="container relative z-10">
           <ScrollAnimation direction="down" threshold={0.2}>
-            <h2 className="section-title text-center">My Portfolio</h2>
+            <h2 className="section-title text-center">Our Portfolio</h2>
           </ScrollAnimation>
           
           <ScrollAnimation direction="up" delay={0.2} threshold={0.2}>
@@ -185,6 +186,40 @@ const App = () => {
           </ScrollAnimation>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
+            <ScrollAnimation direction="left" delay={0.3} threshold={0.2}>
+              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={hotelLogo}
+                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
+                    <a 
+                      href="https://hotelmenu.aisoft.it.com/Jai_Bhavani" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                    >
+                      Visit Live Site
+                    </a>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">Hotel Digital Menu Platform</h3>
+                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
+                   Hotel digital menu viewer for modernising customer experience with smooth animations, engaging user interfaces, and seamless user experience.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">MongoDB</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">NodeJS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">ExpressJS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">HTML/CSS</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">ReactJs</span>
+                  </div>
+                </div>
+              </div>
+            </ScrollAnimation>
+
             <ScrollAnimation direction="left" delay={0.3} threshold={0.2}>
               <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
                 <div className="relative overflow-hidden rounded-t-lg">
@@ -306,38 +341,38 @@ const App = () => {
           <ScrollAnimation direction="up" delay={0.4} threshold={0.2}>
             <div className="card text-center p-8 hover:scale-105 transition-transform duration-300">
               <span className="text-5xl mb-6 block">💻</span>
-              <h3 className="text-2xl font-bold mb-3">Gaurav Walvekar</h3>
-              <p className="text-textSecondary text-lg mb-4">Software Development</p>
+              <h3 className="text-2xl font-bold mb-3">AiSoft</h3>
+              <p className="text-textSecondary text-lg mb-4">Creative Solutions</p>
               <p className="text-textSecondary mb-8">
                 Let's discuss your next project and create something amazing together.
               </p>
               <div className="flex flex-col space-y-4 items-center">
-                <a 
-                  href="tel:+918888308567" 
+                <a
+                  href="tel:+1234567890"
                   className="flex items-center space-x-2 text-tertiary hover:text-accent transition-colors duration-300 group"
                 >
                   <FiPhone className="text-xl group-hover:scale-110 transition-transform duration-300" />
                   <span>+91 8888308567</span>
                 </a>
-                <a 
-                  href="mailto:Gauravwalvekarr@gmail.com" 
+                <a
+                  href="mailto:gauravwalvekarr@gmail.com"
                   className="flex items-center space-x-2 text-tertiary hover:text-accent transition-colors duration-300 group"
                 >
                   <FiMail className="text-xl group-hover:scale-110 transition-transform duration-300" />
-                  <span>Gauravwalvekarr@gmail.com</span>
+                  <span>gauravwalvekarr@gmail.com</span>
                 </a>
                 <div className="flex space-x-4 mt-2">
-                  <a 
-                    href="https://github.com/Gaurav-R-Walvekar" 
-                    target="_blank" 
+                  {/* <a
+                    href="https://github.com/aisoft"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-textSecondary hover:text-tertiary transition-colors duration-300 group"
                   >
                     <FiGithub className="text-2xl group-hover:scale-110 transition-transform duration-300" />
-                  </a>
-                  <a 
-                    href="https://www.linkedin.com/in/gaurav-walvekar-323166211/" 
-                    target="_blank" 
+                  </a> */}
+                  <a
+                    href="https://www.linkedin.com/in/gaurav-walvekar-323166211/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-textSecondary hover:text-tertiary transition-colors duration-300 group"
                   >
@@ -354,7 +389,7 @@ const App = () => {
       <footer className="w-full bg-black/60 border-t border-white/10 py-8 mt-20">
         <div className="max-w-4xl mx-auto flex flex-col items-center justify-center gap-4 px-4">
           <div className="text-center text-textSecondary text-sm">
-            © {new Date().getFullYear()} Gaurav | Software Craftsman. Pushing the boundaries of creativity.
+            © {new Date().getFullYear()} AiSoft | Creative Solutions. Pushing the boundaries of creativity.
           </div>
         </div>
       </footer>
