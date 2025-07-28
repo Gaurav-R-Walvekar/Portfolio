@@ -355,11 +355,11 @@ const App = () => {
                   <span>+91 8888308567</span>
                 </a>
                 <a
-                  href="mailto:gauravwalvekarr@gmail.com"
+                  href="mailto:aisoftservice@gmail.com"
                   className="flex items-center space-x-2 text-tertiary hover:text-accent transition-colors duration-300 group"
                 >
                   <FiMail className="text-xl group-hover:scale-110 transition-transform duration-300" />
-                  <span>gauravwalvekarr@gmail.com</span>
+                  <span>aisoftservice@gmail.com</span>
                 </a>
                 <div className="flex space-x-4 mt-2">
                   {/* <a
