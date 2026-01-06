@@ -293,12 +293,12 @@ const App = () => {
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={prsLogo} 
-                    alt="PRS Car Stock Platform"
+                    alt="RVM  Car Stock Platform"
                     className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
                     <a
-                      href="https://prs-stock.x02.me/stock"
+                      href="https://rvm.x02.me/stock"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
@@ -308,7 +308,7 @@ const App = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">PRS Stock Platform</h3>
+                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">RVM Stock Platform</h3>
                   <p className="text-textSecondary text-sm mb-4 leading-relaxed">
                     A comprehensive Car stock tracking and analysis platform with real-time data visualization and intuitive dashboard.
                   </p>
