@@ -8,16 +8,20 @@ import rainbetLogo from './img/rainbet-logo.png'
 import sonyLogo from './img/Sony.png'
 import prsLogo from './img/PRS_logo.png'
 import hotelLogo from './img/Hotel_logo.png'
+import garageLogo from './img/garage-logo.png'
+import krushvelLogo from './img/krushvel-logo.png'
 import webProjects from './data/webProjects.json'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const imageMap: Record<string, string> = {
-    'Hotel_logo.png': hotelLogo,
+    'hotel-logo.png': hotelLogo,
     'rainbet-logo.png': rainbetLogo,
     'Sony.png': sonyLogo,
     'PRS_logo.png': prsLogo,
+    'garage-logo.png': garageLogo,
+    'krushvel-logo.png': krushvelLogo,
   }
 
   const navItems = [
@@ -202,7 +206,7 @@ const App = () => {
                   key={project.id}
                   title={project.title}
                   description={project.description}
-                  imageSrc={imageMap[project.image] || project.image}
+                  imageSrc={imageMap[project.image]}
                   link={project.link}
                   skills={project.skills}
                   index={index}
