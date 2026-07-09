@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hotel-digital-menu",
+    "title": "Hotel Digital Menu Platform",
+    "description": "Hotel digital menu viewer for modernising customer experience with smooth animations, engaging user interfaces, and seamless user experience.",
+    "image": "src\\img\\hotel-logo.png",
+    "link": "https://hotelmenu.aisoft.it.com/Jai_Bhavani",
+    "skills": ["MongoDB", "NodeJS", "ExpressJS", "HTML/CSS", "ReactJs"],
+    "show": false
+  },
+  {
+    "id": "lucky-roller-reward",
+    "title": "Lucky Roller Reward",
+    "description": "An interactive gaming platform featuring smooth animations, engaging user interfaces, and seamless user experience.",
+    "image": "src\\img\\rainbet-logo.png",
+    "link": "https://www.luckyrollerreward.com/",
+    "skills": ["JavaScript", "CSS3", "Responsive", "Animations"],
+    "show": true
+  },
+  {
+    "id": "sony-crusher-engineering",
+    "title": "Sony Crusher Engineering",
+    "description": "A professional business website for a leading stone crusher and wiremesh manufacturing company.",
+    "image": "src\\img\\sony.png",
+    "link": "https://sony-crusher.vercel.app",
+    "skills": ["Node JS", "HTML/CSS", "Responsive", "Business"],
+    "show": true
+  },
+  {
+    "id": "rvm-stock-platform",
+    "title": "RVM Stock Platform",
+    "description": "A comprehensive Car stock tracking and analysis platform with real-time data visualization and intuitive dashboard.",
+    "image": "src\\img\\prs-logo.png",
+    "link": "https://rvm.x02.me/stock",
+    "skills": ["MongoDB", "NodeJS", "ExpressJS", "HTML/CSS", "Responsive"],
+    "show": false
+  },
+  {
+    "id": "garage-management",
+    "title": "Garage Management System",
+    "description": "A comprehensive vehicle service and repair tracking platform with real-time data visualization and intuitive dashboard.",
+    "image": "src\\img\\garage-logo.png",
+    "link": "https://garage-management.example.com",
+    "skills": ["MongoDB", "NodeJS", "ExpressJS", "HTML/CSS", "Responsive"],
+    "show": true
+  },
+  {
+    "id": "KRUSHVEL",
+    "title": "KRUSHVEL",
+    "description": "Established Indian manufacturer of crusher parts, conveyor rollers and industrial equipment now expanding to serve global buyers.",
+    "image": "src\\img\\krushvel-logo.png",
+    "link": "https://www.krushvel.com/",
+    "skills": ["Business", "Manufacturing", "Export", "Domestic"],
+    "show": true
+  }
+]

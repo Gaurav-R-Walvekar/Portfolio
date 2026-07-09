@@ -3,13 +3,22 @@ import { motion } from 'framer-motion'
 import { FiMenu, FiX, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi'
 import ScrollAnimation from './components/ScrollAnimation'
 import BackgroundAnimation from './components/BackgroundAnimation'
+import ProjectCard from './components/ProjectCard'
 import rainbetLogo from './img/rainbet-logo.png'
 import sonyLogo from './img/Sony.png'
 import prsLogo from './img/PRS_logo.png'
 import hotelLogo from './img/Hotel_logo.png'
+import webProjects from './data/webProjects.json'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const imageMap: Record<string, string> = {
+    'Hotel_logo.png': hotelLogo,
+    'rainbet-logo.png': rainbetLogo,
+    'Sony.png': sonyLogo,
+    'PRS_logo.png': prsLogo,
+  }
 
   const navItems = [
     { name: 'About', href: '#about' },
@@ -186,142 +195,19 @@ const App = () => {
           </ScrollAnimation>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-8">
-            <ScrollAnimation direction="left" delay={0.3} threshold={0.2}>
-              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img
-                    src={hotelLogo}
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                    <a 
-                      href="https://hotelmenu.aisoft.it.com/Jai_Bhavani" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-                    >
-                      Visit Live Site
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">Hotel Digital Menu Platform</h3>
-                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
-                   Hotel digital menu viewer for modernising customer experience with smooth animations, engaging user interfaces, and seamless user experience.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">MongoDB</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">NodeJS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">ExpressJS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">HTML/CSS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">ReactJs</span>
-                  </div>
-                </div>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation direction="left" delay={0.3} threshold={0.2}>
-              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
-                    src={rainbetLogo} 
-                    alt="Lucky Roller Reward Platform" 
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                    <a 
-                      href="https://www.luckyrollerreward.com/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-                    >
-                      Visit Live Site
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">Lucky Roller Reward</h3>
-                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
-                    An interactive gaming platform featuring smooth animations, engaging user interfaces, and seamless user experience.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">JavaScript</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">CSS3</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Responsive</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Animations</span>
-                  </div>
-                </div>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation direction="right" delay={0.4} threshold={0.2}>
-              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
-                    src={sonyLogo} 
-                    alt="Sony Crusher Engineering Website" 
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                    <a 
-                      href="https://sony-crusher.vercel.app" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-                    >
-                      Visit Live Site
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">Sony Crusher Engineering</h3>
-                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
-                    A professional business website for a leading stone crusher and wiremesh manufacturing company.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Node JS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">HTML/CSS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Responsive</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Business</span>
-                  </div>
-                </div>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation direction="left" delay={0.5} threshold={0.2}>
-              <div className="card group shadow-lg rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-tertiary/20 hover:border-tertiary/30">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img
-                    src={prsLogo} 
-                    alt="RVM  Car Stock Platform"
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                    <a
-                      href="https://rvm.x02.me/stock"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-primary text-sm px-6 py-2.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-                    >
-                      Visit Live Site
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-tertiary group-hover:text-accent transition-colors duration-300">RVM Stock Platform</h3>
-                  <p className="text-textSecondary text-sm mb-4 leading-relaxed">
-                    A comprehensive Car stock tracking and analysis platform with real-time data visualization and intuitive dashboard.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">MongoDB</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">NodeJS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">ExpressJS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">HTML/CSS</span>
-                    <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">Responsive</span>
-                  </div>
-                </div>
-              </div>
-            </ScrollAnimation>
+            {webProjects
+              .filter((project) => project.show !== false)
+              .map((project, index) => (
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  imageSrc={imageMap[project.image] || project.image}
+                  link={project.link}
+                  skills={project.skills}
+                  index={index}
+                />
+              ))}
           </div>
         </div>
       </section>
