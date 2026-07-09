@@ -40,7 +40,7 @@
     "title": "Garage Management System",
     "description": "A comprehensive vehicle service and repair tracking platform with real-time data visualization and intuitive dashboard.",
     "image": "garage-logo.png",
-    "link": "https://garage-management.example.com",
+    "link": "https://shree-durga-garage.vercel.app/dashboard",
     "skills": ["MongoDB", "NodeJS", "ExpressJS", "HTML/CSS", "Responsive"],
     "show": true
   },
